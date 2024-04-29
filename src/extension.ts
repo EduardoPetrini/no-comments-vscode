@@ -75,7 +75,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       for (let singleLineSign of commentSigns.singleLine) {
-        if (!isSingleLineComment(lineText,singleLineSign)) {
+        if (!isSingleLineComment(lineText, singleLineSign)) {
           continue;
         }
 
@@ -121,7 +121,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     const userInfoMessage = stats.getStatsMessage();
     vscode.window.showInformationMessage(userInfoMessage);
-    stats.reset()
+    stats.reset();
   });
 
   context.subscriptions.push(disposable);
