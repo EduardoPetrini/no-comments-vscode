@@ -49,7 +49,8 @@ export function activate(context: vscode.ExtensionContext) {
       return;
     }
 
-    const document = activeTextEditor.document;
+    const { document } = activeTextEditor;
+    const { languageId } = document;
 
     let openCommentChanges: Edition[] = [];
     let isMultilineComment = false;
@@ -75,11 +76,13 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       for (let singleLineSign of commentSigns.singleLine) {
-        if (!isSingleLineComment(lineText, singleLineSign)) {
+        if (!isSingleLineComment(lineText, singleLineSign, languageId)) {
           continue;
         }
 
-        lineText = lineText.split(singleLineSign)[0].trimEnd();
+        const { sign } = singleLineSign;
+
+        lineText = lineText.split(sign)[0].trimEnd();
         lineChanged = true;
       }
 

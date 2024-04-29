@@ -1,4 +1,7 @@
-import { commentSigns } from './commentsSigns';
+import { Sign } from './types';
+import { languagesCovered } from './commentsSigns';
+
+const languages = languagesCovered();
 
 const stringWrappers = ["'", '"', '`'];
 
@@ -9,8 +12,13 @@ const countOccurrences = (text: string, pattern: string) => {
   return matches ? matches.length : 0;
 };
 
-export const isSingleLineComment = (lineText: string, sign: string) => {
+export const isSingleLineComment = (lineText: string, singleLineSign: Sign, languageId: string) => {
+  const { sign } = singleLineSign;
   if (!lineText.includes(sign)) {
+    return false;
+  }
+
+  if (languages.includes(languageId) && !singleLineSign.lang.includes(languageId)) {
     return false;
   }
 
@@ -20,7 +28,7 @@ export const isSingleLineComment = (lineText: string, sign: string) => {
     if (!cleanedText.includes(strWrapper)) {
       continue;
     }
-    
+
     const [firstPart, ...rest] = cleanedText.split(sign);
     const secondPart = rest.join(' ');
 
