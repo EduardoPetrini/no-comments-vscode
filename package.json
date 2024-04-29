@@ -1,14 +1,15 @@
 {
   "name": "no-comments",
-  "displayName": "no-comments",
-  "description": "remove all comments in a file",
+  "displayName": "No Comments",
+  "description": "remove all code comments in a file",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.88.0"
+    "vscode": "^1.83.0"
   },
   "categories": [
     "Other"
   ],
+  "icon": "assets/icon.png",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
