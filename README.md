@@ -1,5 +1,7 @@
 # No Comments Extension
 
+![no-comments icon](./assets/icon.png "no-comments icon")
+
 Do you often copy or use AI-generated code with a lot of unnecessary comments? And do you struggle to remove them one by one to make your code more human-like? This extension is here to help you!
 
 ## Introduction
