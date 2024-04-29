@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/EduardoPetrini/no-comments-vscode"
   },
-  "publisher": "EduardoPetrini",
+  "publisher": "eduardopetrini",
   "engines": {
     "vscode": "^1.83.0"
   },
