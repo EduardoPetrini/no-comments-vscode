@@ -35,7 +35,7 @@ This extension is licensed under the [MIT License](LICENSE).
 - Uses [VS Code Extension API](https://code.visualstudio.com/api)
 
 ## Support
-For any issues or suggestions, please [open an issue](https://github.com/EduardoPetrini/no-comments/issues) on GitHub.
+For any issues or suggestions, please [open an issue](https://github.com/EduardoPetrini/no-comments-vscode/issues) on GitHub.
 
 ---
 
