@@ -1,5 +1,7 @@
 # No Comments Extension
 
+Do you often copy or use AI-generated code with a lot of unnecessary comments? And do you struggle to remove them one by one to make your code more human-like? This extension is here to help you!
+
 ## Introduction
 The No Comments extension is designed to remove comments from your code, helping you focus on the essential aspects of your codebase. It detects and removes both single-line and multi-line comments.
 
